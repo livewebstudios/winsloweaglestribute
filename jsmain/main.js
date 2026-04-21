@@ -82,7 +82,8 @@
     '.epk-stat','.testimonial-card','.dl-card',
     '.about-intro-block','.meet-heading','.memoriam-inner',
     '.epk-lede','.media-intro','.tour-intro',
-    '.contact-inner','.cta-inner','.ml-intro'
+    '.contact-inner','.cta-inner','.ml-intro',
+    '.media-gallery-slot','.media-gallery-head','.media-videos-head'
   ];
 
   TARGETS.forEach(function (sel) {
@@ -159,7 +160,7 @@
 
   var lbImg = document.getElementById('lbI');
   var lbCap = document.getElementById('lbC');
-  var slots  = document.querySelectorAll('.strip-slot');
+  var slots  = document.querySelectorAll('.strip-slot, .media-gallery-slot');
   var photos = [];
   var cur    = 0;
 
