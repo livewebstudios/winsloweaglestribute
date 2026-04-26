@@ -129,6 +129,8 @@
   @media (max-width: 860px) {
     .member-row{display:grid;grid-template-columns:1fr;gap:1.75rem;padding:2rem 0;border-top:1px solid rgba(201,168,76,.1)}
     .member-row:nth-child(even){grid-template-columns:1fr}
+    .member-row:nth-child(even) .member-photo{order:-1}
+    .member-row:nth-child(even) .member-bio{order:0}
     .member-photo{max-width:100%;margin:0 auto}
     .member-photo img{width:100%;height:auto;object-fit:cover;object-position:center}
     .member-bio{justify-content:flex-start;text-align:center}
