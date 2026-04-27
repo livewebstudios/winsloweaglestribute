@@ -1,3 +1,121 @@
 {
-  "shows": []
+  "shows": [
+    {
+      "venue": "The Queen Theater",
+      "location": "500 N. Market Street, Wilmington, Delaware 19801",
+      "date": "2026-05-16",
+      "time": "8:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": true
+    },
+    {
+      "venue": "Downtown Freehold Summer Concerts",
+      "location": "1 E Main Street, Freehold, New Jersey 07728",
+      "date": "2026-06-04",
+      "time": "7:30 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "Merrill Park",
+      "location": "344 Fairview Ave, Colonia, New Jersey 07067",
+      "date": "2026-06-06",
+      "time": "7:30 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "Broadway Theater of Pitman",
+      "location": "43 S Broadway, Pitman, New Jersey 08071",
+      "date": "2026-06-12",
+      "time": "8:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "Volunteer in Medicine Gala",
+      "location": "Irem Clubhouse, 64 Ridgway Drive, Dallas, PA 18612",
+      "date": "2026-06-19",
+      "time": "8:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "The Collective Encore",
+      "location": "10221 Wincopin Cir, Columbia, MD 21044",
+      "date": "2026-06-26",
+      "time": "8:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "The Collective Encore",
+      "location": "10221 Wincopin Cir, Columbia, MD 21044",
+      "date": "2026-06-27",
+      "time": "8:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "Clinton Elks — Don Miller Tribute Concert",
+      "location": "211 Sidney Road Rt 617, Pittstown, NJ 08867",
+      "date": "2026-06-28",
+      "time": "2:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "Valley Forge Casino",
+      "location": "1160 1st Ave, King of Prussia, PA 19406",
+      "date": "2026-07-04",
+      "time": "2:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "Sound Check Studios",
+      "location": "150 Corporate Park Dr, Pembroke, MA 02359",
+      "date": "2026-07-10",
+      "time": "8:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "Stone Church",
+      "location": "210 Main St, Brattleboro, VT 05301",
+      "date": "2026-07-11",
+      "time": "8:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "The Yard at Ballys",
+      "location": "1900 Pacific Ave, Atlantic City, NJ 08401",
+      "date": "2026-07-17",
+      "time": "8:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    },
+    {
+      "venue": "LaScala Beach House",
+      "location": "1400 Ocean Ave, Brigantine, NJ 08203",
+      "date": "2026-07-20",
+      "time": "6:00 PM",
+      "url": "",
+      "notes": "",
+      "featured": false
+    }
+  ]
 }
