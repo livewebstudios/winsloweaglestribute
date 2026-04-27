@@ -7,75 +7,64 @@ public_folder: images/uploads
 
 site_url: https://winsloweaglestribute.com
 display_url: https://winsloweaglestribute.com
-logo_url: https://winsloweaglestribute.com/images/logo.png
 
 collections:
 
-  # ─── TOUR DATES ─────────────────────────────────────────────────────────────
-  - name: tour
-    label: Tour Dates
-    label_singular: Show
-    folder: _tour
-    create: true
-    delete: true
-    identifier_field: venue
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{date}} — {{venue}} | {{location}}"
-    sortable_fields: [date, venue]
-    view_filters:
-      - label: Upcoming
-        field: date
-        pattern: "202"
-    fields:
-      - { label: Venue Name, name: venue, widget: string, hint: "e.g. Starland Ballroom" }
-      - { label: City / State, name: location, widget: string, hint: "e.g. Sayreville, NJ" }
-      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "MM/DD/YYYY", time_format: false }
-      - { label: Show Time, name: time, widget: string, required: false, hint: "e.g. 8:00 PM" }
-      - { label: Ticket / Event URL, name: url, widget: string, required: false, hint: "Full URL or leave blank" }
-      - { label: Notes, name: notes, widget: string, required: false, hint: "e.g. Free Admission · 21+ · Private Event" }
-      - { label: "Featured on Homepage", name: featured, widget: boolean, default: false, hint: "Show in Upcoming Shows section on home page" }
-
-  # ─── MEDIA / VIDEOS ─────────────────────────────────────────────────────────
-  - name: media
-    label: Videos
-    label_singular: Video
-    folder: _media
-    create: true
-    delete: true
-    identifier_field: title
-    slug: "{{order}}-{{slug}}"
-    summary: "#{{order}} — {{title}}"
-    sortable_fields: [order, title]
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: YouTube Video ID, name: youtube_id, widget: string, hint: "The part after watch?v= — e.g. dQw4w9WgXcQ" }
-      - { label: Description, name: description, widget: text, required: false }
-      - { label: Display Order, name: order, widget: number, default: 1, value_type: int, min: 1, hint: "1 = first on page" }
-
-  # ─── TESTIMONIALS ────────────────────────────────────────────────────────────
-  - name: testimonials
-    label: Testimonials
-    label_singular: Testimonial
-    folder: _testimonials
-    create: true
-    delete: true
-    identifier_field: name
-    slug: "{{slug}}"
-    summary: "{{name}} — {{title}}"
-    fields:
-      - { label: Quote, name: quote, widget: text, hint: "Do not include quotation marks — they are added automatically" }
-      - { label: Name, name: name, widget: string, hint: "e.g. Maria Gonzalez" }
-      - { label: Title / Role, name: title, widget: string, required: false, hint: "e.g. Event Coordinator, Holiday Inn Woodbridge" }
-      - { label: "Featured on Homepage", name: featured, widget: boolean, default: false }
-
-  # ─── FILE COLLECTIONS ────────────────────────────────────────────────────────
   - name: content
     label: Site Content
     files:
 
-      # GALLERY
+      # ─── TOUR DATES ──────────────────────────────────────────────────────────
+      - name: tour
+        label: Tour Dates
+        file: _content/tour.json
+        fields:
+          - label: Shows
+            name: shows
+            widget: list
+            summary: "{{fields.date}} — {{fields.venue}}"
+            fields:
+              - { label: Venue Name, name: venue, widget: string }
+              - { label: City / State, name: location, widget: string }
+              - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "MM/DD/YYYY", time_format: false }
+              - { label: Show Time, name: time, widget: string, required: false, hint: "e.g. 8:00 PM" }
+              - { label: Ticket / Event URL, name: url, widget: string, required: false }
+              - { label: Notes, name: notes, widget: string, required: false, hint: "e.g. Free Admission · 21+" }
+              - { label: "Featured on Homepage", name: featured, widget: boolean, default: false }
+
+      # ─── VIDEOS ──────────────────────────────────────────────────────────────
+      - name: media
+        label: Videos
+        file: _content/media.json
+        fields:
+          - label: Videos
+            name: videos
+            widget: list
+            summary: "#{{fields.order}} — {{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: YouTube Video ID, name: youtube_id, widget: string, hint: "Just the ID after watch?v= e.g. dQw4w9WgXcQ" }
+              - { label: Description, name: description, widget: text, required: false }
+              - { label: Display Order, name: order, widget: number, default: 1, value_type: int }
+
+      # ─── TESTIMONIALS ─────────────────────────────────────────────────────────
+      - name: testimonials
+        label: Testimonials
+        file: _content/testimonials.json
+        fields:
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Quote, name: quote, widget: text }
+              - { label: Name, name: name, widget: string }
+              - { label: Title / Role, name: title, widget: string, required: false }
+              - { label: "Featured on Homepage", name: featured, widget: boolean, default: false }
+
+      # ─── GALLERY ──────────────────────────────────────────────────────────────
       - name: gallery
-        label: "Photo Gallery"
+        label: Photo Gallery
         file: _content/gallery.json
         fields:
           - label: Photos
@@ -83,13 +72,13 @@ collections:
             widget: list
             summary: "{{fields.alt}}"
             fields:
-              - { label: Image File, name: image, widget: image, hint: "Drag and drop or click to upload" }
+              - { label: Image, name: image, widget: image }
               - { label: Caption, name: caption, widget: string, required: false }
-              - { label: Alt Text, name: alt, widget: string, hint: "Brief description for accessibility" }
+              - { label: Alt Text, name: alt, widget: string }
 
-      # BAND MEMBERS
+      # ─── BAND MEMBERS ─────────────────────────────────────────────────────────
       - name: band
-        label: "Band Members"
+        label: Band Members
         file: _content/band.json
         fields:
           - label: Members
@@ -98,18 +87,18 @@ collections:
             summary: "{{fields.name}} — {{fields.role}}"
             fields:
               - { label: Name, name: name, widget: string }
-              - { label: Role / Instrument, name: role, widget: string, hint: "e.g. Lead Vocals, Eagles Tribute" }
+              - { label: Role / Instrument, name: role, widget: string }
               - { label: Photo, name: photo, widget: image }
               - { label: Bio, name: bio, widget: text }
 
-      # GLOBAL SETTINGS
+      # ─── GLOBAL SETTINGS ──────────────────────────────────────────────────────
       - name: settings
-        label: "Global Settings"
+        label: Global Settings
         file: _content/settings.json
         fields:
           - { label: Booking Email, name: booking_email, widget: string }
           - { label: Phone Number, name: phone, widget: string }
-          - { label: Booking Contact Name, name: booking_contact, widget: string, required: false, hint: "Name shown on booking page" }
-          - { label: Facebook URL, name: facebook, widget: string, required: false, hint: "Full URL including https://" }
+          - { label: Booking Contact Name, name: booking_contact, widget: string, required: false }
+          - { label: Facebook URL, name: facebook, widget: string, required: false }
           - { label: Instagram URL, name: instagram, widget: string, required: false }
           - { label: YouTube Channel URL, name: youtube, widget: string, required: false }

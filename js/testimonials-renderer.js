@@ -1,18 +1,14 @@
 /**
- * js/testimonials-renderer.js
- * Reads _testimonials/index.json.
- *
- * Targets:
- *   booking.html  → #testimonials-container       (all testimonials)
- *   index.html    → #homepage-testimonial-container (featured only, or first)
- *
- * Calls window.LWS.observe(el) for IntersectionObserver fade-ins.
+ * js/testimonials-renderer.js — v2
+ * Reads _content/testimonials.json (Decap file collection — no GitHub Action needed).
+ * Renders on booking.html → #testimonials-container
+ * Renders on index.html  → #homepage-testimonial-container (featured only)
  */
 
 (function () {
   'use strict';
 
-  var TESTIMONIALS_INDEX = '_testimonials/index.json';
+  var TESTIMONIALS_DATA = '_content/testimonials.json';
 
   function observe(el) {
     if (window.LWS && typeof window.LWS.observe === 'function') {
@@ -24,70 +20,57 @@
 
   function esc(str) {
     if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
   function buildCard(t) {
     var card = document.createElement('div');
     card.className = 'testimonial-card fade-in-element';
-
-    var inner = '';
-    inner += '<blockquote class="testimonial-quote">';
-    inner +=   '<p>&#8220;' + esc(t.quote) + '&#8221;</p>';
-    inner += '</blockquote>';
-    inner += '<div class="testimonial-attribution">';
-    inner +=   '<span class="testimonial-name">' + esc(t.name) + '</span>';
-    if (t.title) {
-      inner += '<span class="testimonial-title">' + esc(t.title) + '</span>';
-    }
-    inner += '</div>';
-
-    card.innerHTML = inner;
+    var html = '';
+    html += '<blockquote class="testimonial-quote"><p>&#8220;' + esc(t.quote) + '&#8221;</p></blockquote>';
+    html += '<div class="testimonial-attribution">';
+    html +=   '<span class="testimonial-name">' + esc(t.name) + '</span>';
+    if (t.title) html += '<span class="testimonial-title">' + esc(t.title) + '</span>';
+    html += '</div>';
+    card.innerHTML = html;
     return card;
   }
 
   function renderTestimonials() {
-    var fullContainer     = document.getElementById('testimonials-container');
-    var featuredContainer = document.getElementById('homepage-testimonial-container');
+    var fullEl     = document.getElementById('testimonials-container');
+    var featuredEl = document.getElementById('homepage-testimonial-container');
+    if (!fullEl && !featuredEl) return;
 
-    if (!fullContainer && !featuredContainer) return;
-
-    fetch(TESTIMONIALS_INDEX)
-      .then(function (res) {
+    fetch(TESTIMONIALS_DATA)
+      .then(function(res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         return res.json();
       })
-      .then(function (testimonials) {
+      .then(function(data) {
+        var all = data.testimonials || [];
 
-        // booking.html — all testimonials
-        if (fullContainer) {
-          fullContainer.innerHTML = '';
-          testimonials.forEach(function (t) {
+        if (fullEl) {
+          fullEl.innerHTML = '';
+          all.forEach(function(t) {
             var card = buildCard(t);
-            fullContainer.appendChild(card);
+            fullEl.appendChild(card);
             observe(card);
           });
         }
 
-        // index.html — featured only, fall back to first item
-        if (featuredContainer) {
-          var featured = testimonials.filter(function (t) { return t.featured; });
-          var source   = featured.length ? featured : testimonials.slice(0, 1);
-          featuredContainer.innerHTML = '';
-          source.forEach(function (t) {
+        if (featuredEl) {
+          var featured = all.filter(function(t) { return t.featured; });
+          var source   = featured.length ? featured : all.slice(0, 1);
+          featuredEl.innerHTML = '';
+          source.forEach(function(t) {
             var card = buildCard(t);
-            featuredContainer.appendChild(card);
+            featuredEl.appendChild(card);
             observe(card);
           });
         }
-
       })
-      .catch(function (err) {
-        console.warn('[testimonials-renderer] Could not load ' + TESTIMONIALS_INDEX + ':', err.message);
+      .catch(function(err) {
+        console.warn('[testimonials-renderer]', err.message);
       });
   }
 
