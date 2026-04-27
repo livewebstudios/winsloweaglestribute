@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  var TOUR_DATA = '_content/tour.json';
+ var TOUR_DATA = '_content/tour.json?v=' + Date.now();
 
   function observe(el) {
     if (window.LWS && typeof window.LWS.observe === 'function') {
