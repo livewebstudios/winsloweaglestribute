@@ -1,0 +1,61 @@
+<!--
+  ════════════════════════════════════════════════════════
+  NETLIFY IDENTITY SNIPPET
+  Paste both blocks into EVERY root HTML page:
+    index.html, about.html, tour.html, media.html, booking.html
+
+  Block 1 → in <head>, before </head>
+  Block 2 → in <body>, before </body>
+  ════════════════════════════════════════════════════════
+-->
+
+<!-- BLOCK 1: paste in <head> -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<!-- BLOCK 2: paste before </body> -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', function (user) {
+      if (!user) {
+        window.netlifyIdentity.on('login', function () {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+</script>
+
+<!--
+  Also add the renderer scripts before </body> on the appropriate pages:
+
+  index.html:
+    <script src="js/settings-renderer.js"></script>
+    <script src="js/tour-renderer.js"></script>
+    <script src="js/testimonials-renderer.js"></script>
+    <script src="js/gallery-renderer.js"></script>
+
+  tour.html:
+    <script src="js/tour-renderer.js"></script>
+
+  media.html:
+    <script src="js/media-renderer.js"></script>
+
+  booking.html:
+    <script src="js/testimonials-renderer.js"></script>
+    <script src="js/settings-renderer.js"></script>
+
+  about.html:
+    <script src="js/band-renderer.js"></script>
+
+  Also add data-setting attributes to your footer/booking contact elements.
+  See js/settings-renderer.js header comments for the full attribute list.
+
+  Also add container IDs to your pages:
+    index.html  → id="homepage-shows-container" data-max="3"
+                  id="homepage-testimonial-container"
+                  id="photo-strip"
+    tour.html   → id="tour-dates-container"
+    media.html  → id="video-grid-container"
+    booking.html→ id="testimonials-container"
+    about.html  → id="band-members-container"
+-->
