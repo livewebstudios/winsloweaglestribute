@@ -1,3 +1,40 @@
 {
-  "members": []
+  "members": [
+    {
+      "name": "Steve Ratchen",
+      "role": "Vocals / Bass Guitar",
+      "photo": "images/band/steve-ratchen.jpg",
+      "bio": "Steve's powerful vocals are the heart of Winslow's sound. A seasoned performer with decades on stage, he channels the soaring range of Don Henley and Glenn Frey night after night."
+    },
+    {
+      "name": "Ernie Vitale",
+      "role": "Guitar / Vocals",
+      "photo": "images/band/ernie-vitale.jpg",
+      "bio": "Ernie brings precision and feel to every performance, capturing the signature guitar tones that define the Eagles' timeless catalog — from the crunch of 'Life in the Fast Lane' to the shimmer of 'Desperado.'"
+    },
+    {
+      "name": "Jack Sharnikow",
+      "role": "Guitar / Vocals",
+      "photo": "images/band/jack-scharnikow.jpg",
+      "bio": "Jack rounds out Winslow's guitar army with versatility and fire, handling a wide range of Eagles material with both technical skill and emotional authenticity."
+    },
+    {
+      "name": "Arnold Valentino",
+      "role": "Keyboards / Vocals",
+      "photo": "images/band/arnold-valentino.jpg",
+      "bio": "Arnold's keyboard work fills the sonic landscape essential to the Eagles sound — from the grand piano chords of 'Hotel California' to the organ swells that define their greatest ballads."
+    },
+    {
+      "name": "Brian Clayton",
+      "role": "Drums / Vocals",
+      "photo": "images/band/brian-clayton.jpg",
+      "bio": "Brian drives the band with the precision and power of Don Henley's iconic drumming, while adding his own voice to Winslow's legendary 5-part harmonies."
+    },
+    {
+      "name": "Gary Oleyar",
+      "role": "Guitar / Vocals",
+      "photo": "images/band/gary-oleyar.jpg",
+      "bio": "Gary's dueling guitar work is a cornerstone of the Winslow live experience. His ability to recreate the layered harmonics of the Eagles' twin-guitar arrangements is nothing short of extraordinary."
+    }
+  ]
 }

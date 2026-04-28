@@ -1,3 +1,28 @@
 {
-  "testimonials": []
+  "testimonials": [
+    {
+      "quote": "Winslow is an Eagles tribute that truly captures the magic of their iconic sound, blending tight harmonies with expert musicianship. From the soaring guitars to the on point vocals, they authentically perform Eagles songs including all of the classics. A fun show that delighted our audience!",
+      "name": "Ron Ozer",
+      "title": "Elkton Music Hall",
+      "featured": false
+    },
+    {
+      "quote": "I’ve been booking Winslow, An Evening of the Eagles Tribute for 4+ years. Winslow offers one of the most professional and authentic Eagles tribute shows around. They are consistently increasing their fan base, exponentially. I will continue to use them as part of my tribute act roster.",
+      "name": "Don K",
+      "title": "Golden Nugget AC, Talent Buyer",
+      "featured": false
+    },
+    {
+      "quote": "Winslow absolutely blew us away at The Broadway Theatre of Pitman. Their performance was more than just a tribute—it felt like we were right there at an Eagles concert. The musicianship was top-tier, and their vocals were so spot-on that it gave everyone in the room chills. Our audience was on their feet by the end. On top of that, the guys in the band were great to work with—professional, easygoing, and genuinely passionate about what they do. We can’t wait to have them back!",
+      "name": "Nicholas Blood",
+      "title": "The Broadway Theatre of Pitman",
+      "featured": false
+    },
+    {
+      "quote": "Winslow, An Evening of Eagles Music, offers the most authentic Eagles Tribute experience on the East Coast. After 2 back to back sold out shows at our venue, Winslow delivered a musical journey with a terrific stage display and an interactive multimedia video presentation which pays homage to past and present members of the Eagles. It was a great concert; the audiences loved it and we are absolutely looking forward to a return engagement. I highly recommend this top notch tribute show!",
+      "name": "Gail Anderson",
+      "title": "SurfLight Theater",
+      "featured": false
+    }
+  ]
 }
