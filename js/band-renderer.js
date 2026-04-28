@@ -1,9 +1,6 @@
-/**
+﻿/**
  * js/band-renderer.js
- * Reads _content/band.json (Decap file collection).
- * Renders alternating image/text rows into #band-members-container on about.html.
- *
- * Calls window.LWS.observe(el) for IntersectionObserver fade-ins.
+ * Reads _content/band.json and renders band members into #band-members-container.
  */
 
 (function () {
@@ -28,22 +25,20 @@
       .replace(/"/g, '&quot;');
   }
 
-  function buildMemberRow(member, index) {
-    var row       = document.createElement('div');
-    var direction = index % 2 === 0 ? 'row-standard' : 'row-reverse';
-    row.className = 'band-member-row fade-in-element ' + direction;
+  function buildMemberRow(member) {
+    var row = document.createElement('div');
+    row.className = 'member-row fade-in-element';
 
-    var inner = '';
-    inner += '<div class="member-photo">';
-    inner +=   '<img src="' + esc(member.photo) + '" alt="' + esc(member.name) + '" loading="lazy">';
-    inner += '</div>';
-    inner += '<div class="member-info">';
-    inner +=   '<h3 class="member-name">' + esc(member.name) + '</h3>';
-    inner +=   '<div class="member-role">' + esc(member.role) + '</div>';
-    inner +=   '<p class="member-bio">' + esc(member.bio) + '</p>';
-    inner += '</div>';
+    row.innerHTML =
+      '<div class="member-photo">' +
+        '<img src="' + esc(member.photo) + '" alt="' + esc(member.name) + '" loading="lazy">' +
+      '</div>' +
+      '<div class="member-bio">' +
+        '<h3 class="member-name">' + esc(member.name) + '</h3>' +
+        '<p class="member-role">' + esc(member.role) + '</p>' +
+        '<p class="member-text">' + esc(member.bio) + '</p>' +
+      '</div>';
 
-    row.innerHTML = inner;
     return row;
   }
 
@@ -57,11 +52,11 @@
         return res.json();
       })
       .then(function (data) {
-        var members = data.members || [];
+        var members = (data && data.members) || [];
         container.innerHTML = '';
 
-        members.forEach(function (member, index) {
-          var row = buildMemberRow(member, index);
+        members.forEach(function (member) {
+          var row = buildMemberRow(member);
           container.appendChild(row);
           observe(row);
         });
@@ -71,6 +66,8 @@
       });
   }
 
-  document.addEventListener('DOMContentLoaded', renderBand);
+  if (typeof document !== 'undefined' && document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', renderBand);
+  }
 
 })();
