@@ -47,7 +47,7 @@
     html += '<div class="show-location">' + esc(show.location) + '</div>';
     if (show.time) html += '<div class="show-time">' + esc(show.time) + '</div>';
     if (show.notes) html += '<div class="show-notes">' + esc(show.notes) + '</div>';
-    if (show.url) html += '<a href="' + esc(show.url) + '" class="show-link btn" target="_blank" rel="noopener noreferrer">TICKETS / INFO</a>';
+    if (show.url) html += '<a href="' + esc(show.url) + '" class="show-link btn" target="_blank" rel="noopener noreferrer">' + esc(show.label || 'MORE INFO') + '</a>';
     card.innerHTML = html;
     return card;
   }

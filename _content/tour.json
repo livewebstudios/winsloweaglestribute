@@ -5,7 +5,8 @@
       "location": "500 N. Market Street, Wilmington, Delaware 19801",
       "date": "2026-05-16",
       "time": "8:00 PM",
-      "url": "",
+      "url": "https://www.ticketmaster.com/winslow-an-evening-of-the-eagles-wilmington-delaware-05-16-2026/event/0200643C8A526E0D",
+      "label": "Get Tickets",
       "notes": "",
       "featured": true
     },
@@ -14,7 +15,8 @@
       "location": "1 E Main Street, Freehold, New Jersey 07728",
       "date": "2026-06-04",
       "time": "7:30 PM",
-      "url": "",
+      "url": "https://www.facebook.com/downtownfreehold",
+      "label": "More Info",
       "notes": "",
       "featured": false
     },
@@ -23,7 +25,8 @@
       "location": "344 Fairview Ave, Colonia, New Jersey 07067",
       "date": "2026-06-06",
       "time": "7:30 PM",
-      "url": "",
+      "url": "https://www.facebook.com/photo/?fbid=1565542685293550&set=a.552260486621780",
+      "label": "More Info",
       "notes": "",
       "featured": false
     },
@@ -32,7 +35,8 @@
       "location": "43 S Broadway, Pitman, New Jersey 08071",
       "date": "2026-06-12",
       "time": "8:00 PM",
-      "url": "",
+      "url": "https://www.thebroadwaytheatre.org/show/winslow-an-evening-of-the-eagles/",
+      "label": "Get Tickets",
       "notes": "",
       "featured": false
     },
@@ -41,7 +45,8 @@
       "location": "Irem Clubhouse, 64 Ridgway Drive, Dallas, PA 18612",
       "date": "2026-06-19",
       "time": "8:00 PM",
-      "url": "",
+      "url": "http://www.vimwb.org/annual-gala.html",
+      "label": "Get Tickets",
       "notes": "",
       "featured": false
     },
@@ -50,7 +55,8 @@
       "location": "10221 Wincopin Cir, Columbia, MD 21044",
       "date": "2026-06-26",
       "time": "8:00 PM",
-      "url": "",
+      "url": "https://www.eventbrite.com/e/winslow-evening-of-the-eagles-night-one-tickets-1985919080429",
+      "label": "Get Tickets",
       "notes": "",
       "featured": false
     },
@@ -59,16 +65,18 @@
       "location": "10221 Wincopin Cir, Columbia, MD 21044",
       "date": "2026-06-27",
       "time": "8:00 PM",
-      "url": "",
+      "url": "https://www.eventbrite.com/e/winslow-evening-of-the-eagles-night-two-tickets-1985919164681",
+      "label": "Get Tickets",
       "notes": "",
       "featured": false
     },
     {
-      "venue": "Clinton Elks — Don Miller Tribute Concert",
+      "venue": "Clinton Elks - Don Miller Tribute Concert",
       "location": "211 Sidney Road Rt 617, Pittstown, NJ 08867",
       "date": "2026-06-28",
       "time": "2:00 PM",
-      "url": "",
+      "url": "https://www.facebook.com/events/4350891438525198",
+      "label": "Show Info",
       "notes": "",
       "featured": false
     },
@@ -77,7 +85,8 @@
       "location": "1160 1st Ave, King of Prussia, PA 19406",
       "date": "2026-07-04",
       "time": "2:00 PM",
-      "url": "",
+      "url": "https://vfcasino.boydgaming.com/",
+      "label": "Show Info",
       "notes": "",
       "featured": false
     },
@@ -86,7 +95,8 @@
       "location": "150 Corporate Park Dr, Pembroke, MA 02359",
       "date": "2026-07-10",
       "time": "8:00 PM",
-      "url": "",
+      "url": "https://www.soundcheck-studios.com/shows",
+      "label": "Get Tickets",
       "notes": "",
       "featured": false
     },
@@ -95,7 +105,8 @@
       "location": "210 Main St, Brattleboro, VT 05301",
       "date": "2026-07-11",
       "time": "8:00 PM",
-      "url": "",
+      "url": "https://tickets.venuepilot.com/e/winslow-2026-07-11-stone-church-brattleboro-8b27a4",
+      "label": "Get Tickets",
       "notes": "",
       "featured": false
     },
@@ -104,7 +115,8 @@
       "location": "1900 Pacific Ave, Atlantic City, NJ 08401",
       "date": "2026-07-17",
       "time": "8:00 PM",
-      "url": "",
+      "url": "https://casinos.ballys.com/atlantic-city/events-calendar.aspx",
+      "label": "Get Tickets",
       "notes": "",
       "featured": false
     },
@@ -113,17 +125,10 @@
       "location": "1400 Ocean Ave, Brigantine, NJ 08203",
       "date": "2026-07-20",
       "time": "6:00 PM",
-      "url": "",
+      "url": "https://lascalasbeachhouse.com/",
+      "label": "Show Info",
       "notes": "",
       "featured": false
-    },
-    {
-      "featured": false,
-      "venue": "Test venue",
-      "location": "Happytown, Idaho",
-      "date": "2030-01-15",
-      "time": "6:58am",
-      "url": "$1500.00"
     }
   ]
 }
