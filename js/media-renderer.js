@@ -1,62 +1,38 @@
-/**
- * js/media-renderer.js — v2
- * Reads _content/media.json (Decap file collection — no GitHub Action needed).
- * Renders on media.html → #video-grid-container
- */
-
 (function () {
-  'use strict';
+  var container = document.getElementById('video-grid-container');
+  if (!container) return;
 
-  var MEDIA_DATA = '_content/media.json';
+  fetch('_content/media.json?v=' + Date.now())
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var videos = data.videos || [];
+      if (!videos.length) return;
 
-  function observe(el) {
-    if (window.LWS && typeof window.LWS.observe === 'function') {
-      window.LWS.observe(el);
-    } else {
-      el.classList.add('is-visible');
-    }
-  }
+      videos.forEach(function (v) {
+        var article = document.createElement('article');
+        article.className = 'video-card';
 
-  function esc(str) {
-    if (!str) return '';
-    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
+        var embedSrc = 'https://player.vimeo.com/video/' + v.vimeo_id
+          + '?title=0&byline=0&portrait=0&color=c9a84c';
 
-  function renderVideos() {
-    var container = document.getElementById('video-grid-container');
-    if (!container) return;
+        article.innerHTML =
+          '<div class="video-embed">'
+          + '<iframe src="' + embedSrc + '" allow="autoplay; fullscreen; picture-in-picture"'
+          + ' allowfullscreen title="' + v.title + '"></iframe>'
+          + '</div>'
+          + '<div class="video-info">'
+          + '<span class="video-label">' + v.category + '</span>'
+          + '<h2 class="video-title">' + v.title + '</h2>'
+          + '</div>';
 
-    fetch(MEDIA_DATA)
-      .then(function(res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.json();
-      })
-      .then(function(data) {
-        var videos = data.videos || [];
-        videos
-          .sort(function(a, b) { return (a.order || 99) - (b.order || 99); })
-          .forEach(function(video) {
-            var card = document.createElement('div');
-            card.className = 'video-card fade-in-element';
-            var html = '';
-            html += '<div class="video-embed-wrapper">';
-            html +=   '<iframe src="https://www.youtube.com/embed/' + esc(video.youtube_id) + '"';
-            html +=     ' title="' + esc(video.title) + '" frameborder="0"';
-            html +=     ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"';
-            html +=     ' allowfullscreen loading="lazy"></iframe>';
-            html += '</div>';
-            html += '<div class="video-title">' + esc(video.title) + '</div>';
-            if (video.description) html += '<div class="video-description">' + esc(video.description) + '</div>';
-            card.innerHTML = html;
-            container.appendChild(card);
-            observe(card);
-          });
-      })
-      .catch(function(err) {
-        console.warn('[media-renderer]', err.message);
+        container.appendChild(article);
+
+        if (window.LWS && window.LWS.observe) {
+          window.LWS.observe(article);
+        } else {
+          article.classList.add('visible');
+        }
       });
-  }
-
-  document.addEventListener('DOMContentLoaded', renderVideos);
-
+    })
+    .catch(function (e) { console.error('media-renderer:', e); });
 })();
