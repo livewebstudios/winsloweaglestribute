@@ -40,12 +40,11 @@ collections:
           - label: Videos
             name: videos
             widget: list
-            summary: "#{{fields.order}} — {{fields.title}}"
+            summary: "{{fields.title}}"
             fields:
               - { label: Title, name: title, widget: string }
-              - { label: YouTube Video ID, name: youtube_id, widget: string, hint: "Just the ID after watch?v= e.g. dQw4w9WgXcQ" }
-              - { label: Description, name: description, widget: text, required: false }
-              - { label: Display Order, name: order, widget: number, default: 1, value_type: int }
+              - { label: Category, name: category, widget: string, default: "Live Performance" }
+              - { label: Vimeo Video ID, name: vimeo_id, widget: string, hint: "Just the ID from the Vimeo URL e.g. 1152415510" }
 
       # ─── TESTIMONIALS ─────────────────────────────────────────────────────────
       - name: testimonials
