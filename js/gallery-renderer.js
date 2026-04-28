@@ -1,86 +1,48 @@
-/**
- * js/gallery-renderer.js
- * Reads _content/gallery.json (Decap file collection).
- * Renders photo strip items into #photo-strip on index.html.
- * Hooks into existing lightbox via window.openLightbox(index, photos).
- *
- * Calls window.LWS.observe(el) for IntersectionObserver fade-ins.
- */
-
 (function () {
-  'use strict';
+  var container = document.getElementById('photo-grid-container');
+  if (!container) return;
 
-  var GALLERY_DATA = '_content/gallery.json';
+  fetch('_content/gallery.json?v=' + Date.now())
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var photos = data.photos || [];
+      if (!photos.length) return;
 
-  function observe(el) {
-    if (window.LWS && typeof window.LWS.observe === 'function') {
-      window.LWS.observe(el);
-    } else {
-      el.classList.add('is-visible');
-    }
-  }
+      photos.forEach(function (p) {
+        var wrapper = document.createElement('div');
+        wrapper.setAttribute('role', 'listitem');
 
-  function esc(str) {
-    if (!str) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
-  }
+        var slot = document.createElement('div');
+        slot.className = 'media-gallery-slot';
+        slot.setAttribute('role', 'button');
+        slot.setAttribute('tabindex', '0');
+        slot.setAttribute('aria-label', 'View enlarged: ' + p.alt);
 
-  function renderGallery() {
-    var strip = document.getElementById('photo-strip');
-    if (!strip) return;
+        var img = document.createElement('img');
+        img.src = p.image;
+        img.alt = p.alt;
+        img.loading = 'lazy';
 
-    fetch(GALLERY_DATA)
-      .then(function (res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.json();
-      })
-      .then(function (data) {
-        var photos = data.photos || [];
-        if (!photos.length) return;
+        var zoom = document.createElement('span');
+        zoom.className = 'media-gallery-zoom';
+        zoom.setAttribute('aria-hidden', 'true');
+        zoom.innerHTML = '&#x2315;';
 
-        strip.innerHTML = '';
+        slot.appendChild(img);
+        slot.appendChild(zoom);
+        wrapper.appendChild(slot);
+        container.appendChild(wrapper);
 
-        photos.forEach(function (photo, index) {
-          var item = document.createElement('div');
-          item.className = 'photo-strip-item fade-in-element';
-          item.setAttribute('data-index', index);
-          item.setAttribute('role', 'button');
-          item.setAttribute('tabindex', '0');
-          item.setAttribute('aria-label', photo.alt || photo.caption || 'View photo');
+        if (window.LWS && window.LWS.observe) {
+          window.LWS.observe(slot);
+        } else {
+          slot.classList.add('visible');
+        }
 
-          var inner = '';
-          inner += '<img src="' + esc(photo.image) + '"';
-          inner +=      ' alt="' + esc(photo.alt || photo.caption || 'Band photo') + '"';
-          inner +=      ' loading="lazy">';
-          if (photo.caption) {
-            inner += '<div class="photo-caption">' + esc(photo.caption) + '</div>';
-          }
-          item.innerHTML = inner;
-
-          // Hook into existing lightbox (whatever function the original site uses)
-          function openThis() {
-            if (typeof window.openLightbox === 'function') {
-              window.openLightbox(index, photos);
-            }
-          }
-          item.addEventListener('click',   openThis);
-          item.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openThis(); }
-          });
-
-          strip.appendChild(item);
-          observe(item);
-        });
-      })
-      .catch(function (err) {
-        console.warn('[gallery-renderer] Could not load ' + GALLERY_DATA + ':', err.message);
+        if (window.LWS && window.LWS.bindLightboxSlot) {
+          window.LWS.bindLightboxSlot(slot);
+        }
       });
-  }
-
-  document.addEventListener('DOMContentLoaded', renderGallery);
-
+    })
+    .catch(function (e) { console.error('gallery-renderer:', e); });
 })();
