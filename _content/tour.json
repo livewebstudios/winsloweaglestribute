@@ -129,6 +129,14 @@
       "label": "Show Info",
       "notes": "",
       "featured": false
+    },
+    {
+      "featured": false,
+      "venue": "Test venue",
+      "location": "Happytown, Idaho",
+      "date": "2046-01-30",
+      "time": "6.32am",
+      "url": "https://livewebstudios.com"
     }
   ]
 }
