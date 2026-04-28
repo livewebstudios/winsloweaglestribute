@@ -1,3 +1,19 @@
 {
-  "videos": []
+  "videos": [
+    {
+      "title": "Winslow – An Evening of the Eagles",
+      "category": "Live Performance",
+      "vimeo_id": "1152415510"
+    },
+    {
+      "title": "Winslow – An Evening of the Eagles",
+      "category": "Live Performance",
+      "vimeo_id": "1111446333"
+    },
+    {
+      "title": "Heartache Tonight",
+      "category": "Live Performance",
+      "vimeo_id": "1044688474"
+    }
+  ]
 }
