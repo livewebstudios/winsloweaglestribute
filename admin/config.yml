@@ -29,6 +29,7 @@ collections:
               - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "MM/DD/YYYY", time_format: false }
               - { label: Show Time, name: time, widget: string, required: false, hint: "e.g. 8:00 PM" }
               - { label: Ticket / Event URL, name: url, widget: string, required: false }
+              - { label: Button Label, name: label, widget: string, required: false, default: "GET TICKETS", hint: "e.g. GET TICKETS  ·  MORE INFO  ·  FREE ADMISSION" }
               - { label: Notes, name: notes, widget: string, required: false, hint: "e.g. Free Admission · 21+" }
               - { label: "Featured on Homepage", name: featured, widget: boolean, default: false }
 
