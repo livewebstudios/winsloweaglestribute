@@ -156,6 +156,15 @@
       "date": "2026-08-13",
       "time": "Show Time: 7:30PM",
       "url": "https://wildwoodsnj.com/event/music-in-the-plaza-free/"
+    },
+    {
+      "label": "GET TICKETS",
+      "featured": false,
+      "venue": "Rooftop Summer Concerts at Kennet Flash",
+      "url": "https://kennettflash.org/rooftopconcerts-2/",
+      "time": "Showtime; 7:00PM",
+      "location": "100-198 E Linden St, Kennett Square, PA 19348",
+      "date": "2026-08-22"
     }
   ]
 }
