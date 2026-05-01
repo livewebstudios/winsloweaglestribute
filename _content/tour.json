@@ -174,6 +174,15 @@
       "time": "Showtime: 5:00PM",
       "location": "201 Engleside Avenue, Beach Haven, NJ ",
       "date": "2026-08-24"
+    },
+    {
+      "label": "GET TICKETS",
+      "featured": false,
+      "url": "https://surflighttheatre.csstix.com/event-details.php?e=400",
+      "location": "201 Engleside Avenue, Beach Haven, NJ ",
+      "venue": "Surflight Theater - \"Evening Show 8pm\"",
+      "date": "2026-08-24",
+      "time": "Shostime: 8:00PM"
     }
   ]
 }
