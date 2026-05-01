@@ -147,6 +147,15 @@
       "location": "Veterans Memorial Park, 81 Hunt Road, Orangeburg, New York 10962",
       "date": "2026-08-07",
       "url": "https://www.orangetown.com/"
+    },
+    {
+      "label": "GET TICKETS",
+      "featured": false,
+      "venue": "Music on the Plaza at Bryne Plaza",
+      "location": " Pacific Avenue, Wildwood, NJ",
+      "date": "2026-08-13",
+      "time": "Show Time: 7:30PM",
+      "url": "https://wildwoodsnj.com/event/music-in-the-plaza-free/"
     }
   ]
 }
