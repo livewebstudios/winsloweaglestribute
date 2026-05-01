@@ -165,6 +165,15 @@
       "time": "Showtime; 7:00PM",
       "location": "100-198 E Linden St, Kennett Square, PA",
       "date": "2026-08-22"
+    },
+    {
+      "label": "GET TICKETS",
+      "featured": false,
+      "venue": "Surflight Theater - \"Afternoon Show 5pm\"",
+      "url": "https://surflighttheatre.csstix.com/event-details.php?e=400",
+      "time": "Showtime: 5:00PM",
+      "location": "201 Engleside Avenue, Beach Haven, NJ ",
+      "date": "2026-08-24"
     }
   ]
 }
