@@ -1,17 +1,64 @@
 {
   "photos": [
-    { "image": "images/band/Winslow-2540RETbw.jpg", "alt": "Winslow band studio portrait in black and white.", "caption": "" },
-    { "image": "images/band/Winslow-2547RETcolor.jpg", "alt": "Winslow band studio portrait in color.", "caption": "" },
-    { "image": "images/media/gallery/winslow-band-press-photo.png", "alt": "Winslow band press photo — six members standing together in a studio portrait.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-bass-and-vocals-duo.png", "alt": "Winslow bassist and vocalist performing under purple stage lights.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-theater-from-audience.png", "alt": "Winslow on stage in a large theater, view from the packed audience with balconies.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-hotel-california-theater.png", "alt": "Winslow performing on a blue-lit stage with eagle backdrop and Hotel California neon sign.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-joe-walsh-segment.png", "alt": "Two guitarists on stage with Joe Walsh video backdrop and palm tree staging.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-full-stage-hotel-california.png", "alt": "Six-piece Winslow on stage with Hotel California album-style backdrop and neon sign.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-singer-desert-backdrop.png", "alt": "Lead singer in silhouette before a desert sunset projection with drums in the foreground.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-five-piece-sunset-stage.png", "alt": "Five-piece band with ocean sunset screen and Hotel California neon sign.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-blue-stage-spotlights.png", "alt": "Winslow full band with blue stage lighting, orange uplights, and Hotel California neon.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-green-stage-audience.png", "alt": "Winslow on a green-lit stage with desert-style backdrop; audience filming with phones.", "caption": "" },
-    { "image": "images/media/gallery/winslow-live-rockin-on-the-river.png", "alt": "Outdoor festival at sunset over the river, Rockin' on the River stage and lawn crowd.", "caption": "" }
+    {
+      "image": "images/band/Winslow-2540RETbw.jpg",
+      "alt": "Winslow band studio portrait in black and white.",
+      "caption": ""
+    },
+    {
+      "image": "images/band/Winslow-2547RETcolor.jpg",
+      "alt": "Winslow band studio portrait in color.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-band-press-photo.png",
+      "alt": "Winslow band press photo — six members standing together in a studio portrait.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-live-bass-and-vocals-duo.png",
+      "alt": "Winslow bassist and vocalist performing under purple stage lights.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-live-hotel-california-theater.png",
+      "alt": "Winslow performing on a blue-lit stage with eagle backdrop and Hotel California neon sign.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-live-joe-walsh-segment.png",
+      "alt": "Two guitarists on stage with Joe Walsh video backdrop and palm tree staging.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-live-full-stage-hotel-california.png",
+      "alt": "Six-piece Winslow on stage with Hotel California album-style backdrop and neon sign.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-live-singer-desert-backdrop.png",
+      "alt": "Lead singer in silhouette before a desert sunset projection with drums in the foreground.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-live-five-piece-sunset-stage.png",
+      "alt": "Five-piece band with ocean sunset screen and Hotel California neon sign.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-live-blue-stage-spotlights.png",
+      "alt": "Winslow full band with blue stage lighting, orange uplights, and Hotel California neon.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-live-green-stage-audience.png",
+      "alt": "Winslow on a green-lit stage with desert-style backdrop; audience filming with phones.",
+      "caption": ""
+    },
+    {
+      "image": "images/media/gallery/winslow-live-rockin-on-the-river.png",
+      "alt": "Outdoor festival at sunset over the river, Rockin' on the River stage and lawn crowd.",
+      "caption": ""
+    }
   ]
 }
