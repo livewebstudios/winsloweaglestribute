@@ -184,6 +184,13 @@
       "venue": "Surflight Theater - \"Evening Show 8pm\"",
       "date": "2026-08-24",
       "time": "Shostime: 8:00PM"
+    },
+    {
+      "label": "GET TICKETS",
+      "featured": false,
+      "venue": "TBD",
+      "location": "Asbury Park, NJ",
+      "date": "2026-07-03"
     }
   ]
 }
