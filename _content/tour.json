@@ -7,8 +7,7 @@
       "time": "7:30 PM",
       "url": "https://www.facebook.com/downtownfreehold",
       "label": "More Info",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "Merrill Park",
@@ -17,8 +16,7 @@
       "time": "7:30 PM",
       "url": "https://www.facebook.com/photo/?fbid=1565542685293550&set=a.552260486621780",
       "label": "More Info",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "Broadway Theater of Pitman",
@@ -27,8 +25,7 @@
       "time": "8:00 PM",
       "url": "https://www.thebroadwaytheatre.org/show/winslow-an-evening-of-the-eagles/",
       "label": "Get Tickets",
-      "notes": "",
-      "featured": true
+      "notes": ""
     },
     {
       "venue": "Volunteer in Medicine Gala",
@@ -37,8 +34,7 @@
       "time": "8:00 PM",
       "url": "http://www.vimwb.org/annual-gala.html",
       "label": "Get Tickets",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "The Collective Encore",
@@ -47,8 +43,7 @@
       "time": "8:00 PM",
       "url": "https://www.eventbrite.com/e/winslow-evening-of-the-eagles-night-one-tickets-1985919080429",
       "label": "Get Tickets",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "The Collective Encore",
@@ -57,8 +52,7 @@
       "time": "8:00 PM",
       "url": "https://www.eventbrite.com/e/winslow-evening-of-the-eagles-night-two-tickets-1985919164681",
       "label": "Get Tickets",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "Clinton Elks - Don Miller Tribute Concert",
@@ -67,8 +61,7 @@
       "time": "2:00 PM",
       "url": "https://www.facebook.com/events/4350891438525198",
       "label": "Show Info",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "Valley Forge Casino",
@@ -77,8 +70,7 @@
       "time": "2:00 PM",
       "url": "https://vfcasino.boydgaming.com/",
       "label": "Show Info",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "Sound Check Studios",
@@ -87,8 +79,7 @@
       "time": "8:00 PM",
       "url": "https://www.soundcheck-studios.com/shows",
       "label": "Get Tickets",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "Stone Church",
@@ -97,8 +88,7 @@
       "time": "8:00 PM",
       "url": "https://tickets.venuepilot.com/e/winslow-2026-07-11-stone-church-brattleboro-8b27a4",
       "label": "Get Tickets",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "The Yard at Ballys",
@@ -107,8 +97,7 @@
       "time": "8:00 PM",
       "url": "https://casinos.ballys.com/atlantic-city/events-calendar.aspx",
       "label": "Show Info",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
       "venue": "LaScala Beach House",
@@ -117,11 +106,9 @@
       "time": "6:00 PM",
       "url": "https://lascalasbeachhouse.com/",
       "label": "Show Info",
-      "notes": "",
-      "featured": false
+      "notes": ""
     },
     {
-      "featured": false,
       "venue": "Colonial Theatre - Hotel California Album Show",
       "location": "227 Bridge Street, Phoenixville, PA 19460",
       "date": "2026-07-25",
@@ -131,7 +118,6 @@
       "label": "Get Tickets"
     },
     {
-      "featured": false,
       "venue": "Orangetown 'Rock the Park' Concert Series",
       "time": "Showtime: 7:45PM",
       "location": "Veterans Memorial Park, 81 Hunt Road, Orangeburg, New York 10962",
@@ -141,7 +127,6 @@
     },
     {
       "label": "Show Info",
-      "featured": false,
       "venue": "Music on the Plaza at Bryne Plaza",
       "location": " Pacific Avenue, Wildwood, NJ",
       "date": "2026-08-13",
@@ -150,7 +135,6 @@
     },
     {
       "label": "GET TICKETS",
-      "featured": false,
       "venue": "Rooftop Summer Concerts at Kennett Flash",
       "url": "https://kennettflash.org/rooftopconcerts-2/",
       "time": "Showtime; 7:00PM",
@@ -159,7 +143,6 @@
     },
     {
       "label": "GET TICKETS",
-      "featured": false,
       "venue": "Surflight Theater - \"Afternoon Show 5pm\"",
       "url": "https://surflighttheatre.csstix.com/event-details.php?e=400",
       "time": "Showtime: 5:00PM",
@@ -168,7 +151,6 @@
     },
     {
       "label": "GET TICKETS",
-      "featured": false,
       "url": "https://surflighttheatre.csstix.com/event-details.php?e=400",
       "location": "201 Engleside Avenue, Beach Haven, NJ ",
       "venue": "Surflight Theater - \"Evening Show 8pm\"",
@@ -177,7 +159,6 @@
     },
     {
       "label": "GET TICKETS",
-      "featured": false,
       "venue": "The Stone Pony",
       "location": "913 Ocean Ave, Asbury Park, NJ 07712",
       "date": "2026-07-03",
