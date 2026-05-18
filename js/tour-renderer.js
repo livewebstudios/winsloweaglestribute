@@ -88,14 +88,12 @@
     var el = document.getElementById('homepage-shows-container');
     if (!el) return;
     var max = parseInt(el.getAttribute('data-max'), 10) || 3;
-    var featured = shows.filter(function (s) { return s.featured; });
-    var source = featured.length ? featured : shows;
     el.innerHTML = '';
-    if (!source.length) {
+    if (!shows.length) {
       el.innerHTML = '<p class="no-shows-message">Stay tuned — shows coming soon!</p>';
       return;
     }
-    source.slice(0, max).forEach(function (show) {
+    shows.slice(0, max).forEach(function (show) {
       var card = buildCard(show);
       el.appendChild(card);
       observe(card);
