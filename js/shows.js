@@ -28,16 +28,6 @@
 var SHOWS = [
 
   {
-    date:  "Sat, May 16th",
-    venue: "The Queen Theater",
-    addr:  "500 N. Market Street",
-    city:  "Wilmington, Delaware 19801",
-    time:  "8:00 PM",
-    url:   "https://www.ticketmaster.com/winslow-an-evening-of-the-eagles-wilmington-delaware-05-16-2026/event/0200643C8A526E0D",
-    label: "Get Tickets"
-  },
-
-  {
     date:  "Thu, June 4th",
     venue: "Downtown Freehold Summer Concerts",
     addr:  "1 E Main Street",

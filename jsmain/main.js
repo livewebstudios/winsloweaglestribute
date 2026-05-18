@@ -141,52 +141,6 @@
 })();
 
 
-/* ── Show card renderer ──────────────────────────────────────────
-   Reads SHOWS from shows.js, renders into .shows-grid containers.
-   data-max="3" limits to 3 cards (homepage preview).
-──────────────────────────────────────────────────────────────── */
-(function () {
-  if (typeof window === 'undefined' || typeof document === 'undefined') return;
-  if (typeof SHOWS === 'undefined') return;
-
-  document.querySelectorAll('.shows-grid').forEach(function (grid) {
-    var max   = parseInt(grid.getAttribute('data-max'), 10) || Infinity;
-    var shows = SHOWS.slice(0, max);
-
-    if (shows.length === 0) {
-      grid.innerHTML = '<p class="no-shows">No upcoming shows at this time.<br>Check back soon.</p>';
-      return;
-    }
-
-    grid.innerHTML = shows.map(function (s) {
-      var sold = s.sold ? ' sold-out' : '';
-      var btn  = s.sold
-        ? '<span class="show-btn sold-btn">Sold Out</span>'
-        : '<a class="show-btn" href="' + s.url + '" target="_blank" rel="noopener">' + s.label + '</a>';
-      return [
-        '<div class="show-card' + sold + '">',
-        '  <div class="show-date">' + s.date + '</div>',
-        '  <div class="show-venue">' + s.venue + '</div>',
-        '  <div class="show-addr">' + s.addr + '<br>' + s.city + '</div>',
-        '  <div class="show-time">&#9679; Showtime ' + s.time + '</div>',
-        '  ' + btn,
-        '</div>'
-      ].join('\n');
-    }).join('\n');
-
-    /* Tag freshly rendered cards for fade-in */
-    grid.querySelectorAll('.show-card').forEach(function (card) {
-      card.classList.add('fade-in');
-      if (window.LWS && typeof window.LWS.observe === 'function') {
-        window.LWS.observe(card);
-      } else if (window._fadeObserver) {
-        window._fadeObserver.observe(card);
-      }
-    });
-  });
-})();
-
-
 /* ── Lightbox ── */
 (function () {
   if (typeof window === 'undefined' || typeof document === 'undefined') return;
