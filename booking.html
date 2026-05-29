@@ -143,6 +143,28 @@
   </div>
 </footer>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/shows.js"></script><script src="jsmain/main.js"></script>
+<script>
+(function () {
+  var container = document.getElementById('testimonials-container');
+  if (!container) return;
+  fetch('_content/testimonials.json')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var items = (data && data.testimonials) ? data.testimonials : [];
+      items.forEach(function (t) {
+        var card = document.createElement('div');
+        card.className = 'testimonial-card';
+        card.innerHTML =
+          '<p class="testimonial-quote">“' + t.quote + '”</p>' +
+          '<p class="testimonial-attr">' + t.name +
+          (t.title ? ' &nbsp;&middot;&nbsp; ' + t.title : '') + '</p>';
+        container.appendChild(card);
+        if (window.LWS && window.LWS.observe) window.LWS.observe(card);
+      });
+    })
+    .catch(function () {});
+})();
+</script>
 <style>
   .booking-hero{position:relative;height:480px;display:flex;align-items:flex-end;overflow:hidden}
   .booking-hero-bg{position:absolute;inset:0;background-image:url('images/hero/booking-hero.jpg');background-size:cover;background-position:center 40%;filter:brightness(.55) grayscale(.25)}
