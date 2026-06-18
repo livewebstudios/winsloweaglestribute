@@ -164,6 +164,12 @@
       "date": "2026-07-03",
       "url": "https://www.ticketmaster.com/event/000064A6BAC67295",
       "time": "Showtime: 8:00 PM"
+    },
+    {
+      "label": "GET TICKETS",
+      "venue": "test",
+      "location": "test",
+      "date": "2030-01-29"
     }
   ]
 }
