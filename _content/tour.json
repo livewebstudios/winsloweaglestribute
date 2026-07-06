@@ -167,12 +167,6 @@
     },
     {
       "label": "GET TICKETS",
-      "venue": "test",
-      "location": "test",
-      "date": "2030-01-29"
-    },
-    {
-      "label": "GET TICKETS",
       "venue": "Jammer' Sports Bar",
       "location": "3535 Walters Rd, Syracuse, NY 13209-9774",
       "date": "2026-08-15",
