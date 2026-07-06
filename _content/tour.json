@@ -180,6 +180,14 @@
       "date": "2026-09-12",
       "url": "https://www.ticketmaster.com/event/020064B1942865D1?fbclid=IwY2xjawS5AXxleHRuA2FlbQIxMABicmlkETFQdktobFVtWllLdFNyV21sc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHshNupmFqgFalr9re2PSB3SxAP8n-s4VDyWHZc5fbYbnLoYMqKqe5CxRsm-i_aem_a23ov6XC9dTqP9d3bKFaUw",
       "time": "Showtime: 8:00 PM"
+    },
+    {
+      "label": "GET TICKETS",
+      "venue": "West Shore Theater",
+      "location": "317 Bridge Street, New Cumberland, PA, 17070",
+      "date": "2026-09-26",
+      "time": "Showtime: 1:30pm MATINEE",
+      "url": "https://787694.formovietickets.com:2235/T.ASP?WCI=BT&RtsPurchaseId=f0b84e02-0512-4dad-b2d8-6ea4b4642ef0&Page=PickTickets&SHOWID=1589"
     }
   ]
 }
