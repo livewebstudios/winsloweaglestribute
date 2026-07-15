@@ -204,6 +204,14 @@
       "date": "2026-09-20",
       "time": "ShowTime: 6:00pm",
       "url": "http://www.anchorstikibar.com"
+    },
+    {
+      "label": "GET TICKETS",
+      "venue": "Tally Ho Theater",
+      "date": "2026-09-11",
+      "time": "Showtime: 7:00PM",
+      "url": "https://www.facebook.com/events/1347023177092914/?active_tab=about",
+      "location": "19 W Market St, Leesburg, VA 20176"
     }
   ]
 }
