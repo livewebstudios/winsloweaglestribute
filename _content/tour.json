@@ -228,6 +228,14 @@
       "date": "2026-10-17",
       "time": "Showtime: 8:00PM",
       "url": "https://my.baystreet.org/3602/3603"
+    },
+    {
+      "label": "GET TICKETS",
+      "venue": "Elkton Music Hall",
+      "location": "107 North St, Elkton, MD 21921",
+      "date": "2026-10-30",
+      "time": "Showtime: 8:00pm",
+      "url": "https://link.dice.fm/g972f1950235?pid=8d887526"
     }
   ]
 }
