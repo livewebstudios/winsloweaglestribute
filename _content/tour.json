@@ -220,6 +220,14 @@
       "date": "2026-10-16",
       "time": "TBD",
       "url": "https://unitedtheatre.org/"
+    },
+    {
+      "label": "GET TICKETS",
+      "venue": "Bay Street Theater",
+      "location": "1 Long Wharf Sag Harbor, NY 11963",
+      "date": "2026-10-17",
+      "time": "Showtime: 8:00PM",
+      "url": "https://my.baystreet.org/3602/3603"
     }
   ]
 }
