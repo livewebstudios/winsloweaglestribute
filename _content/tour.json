@@ -260,6 +260,14 @@
       "time": "Showtime: 9pm",
       "date": "2026-11-13",
       "location": "Huron Avenue & Brigantine Boulevard Atlantic City, NJ 08401"
+    },
+    {
+      "label": "More Info",
+      "venue": "The Rex Theater",
+      "url": "https://www.therextheatresomd.com/",
+      "time": "Showtime: TBD",
+      "location": "22695 Washington St, Leonardtown, MD 20650",
+      "date": "2026-11-20"
     }
   ]
 }
