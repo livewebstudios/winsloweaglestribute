@@ -84,6 +84,8 @@
   .ml-social a{width:42px;height:42px;border:1px solid rgba(201,168,76,.28);display:flex;align-items:center;justify-content:center;color:#a09070;transition:border-color .2s,color .2s}
   .ml-social a:hover{border-color:var(--gold);color:var(--gold-light)}
   .ml-social svg{width:18px;height:18px}
+  .mc-honeypot{position:absolute;left:-5000px}
+  .ml-follow-label{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.2em;color:var(--text-muted);text-transform:uppercase;margin-bottom:1rem}
   .ml-fine{font-size:.8rem;color:var(--text-muted);margin-top:1.5rem;line-height:1.6}
   .ml-fine a{color:var(--gold-dim);transition:color .2s}
   .ml-fine a:hover{color:var(--gold-light)}
@@ -102,7 +104,7 @@
     <a href="https://www.facebook.com/WinslowEaglestribute" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
     <a href="https://www.instagram.com/winsloweaglestribute/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
     <a href="https://www.facebook.com/FansofWinslow" target="_blank" rel="noopener" aria-label="Fans of Winslow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></a>
-    <a href="/contact.html" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2 2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    <a href="contact.html" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2 2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
@@ -134,7 +136,6 @@
               id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form"
               class="validate"
-              target="_blank"
               novalidate>
           <div id="mc_embed_signup_scroll">
             <h2>Subscribe for Updates</h2>
@@ -151,12 +152,12 @@
               <input type="text" name="LNAME" id="mce-LNAME" placeholder="Last name">
             </div>
             <!-- Bot protection - do not remove -->
-            <div style="position:absolute;left:-5000px;" aria-hidden="true">
+            <div class="mc-honeypot" aria-hidden="true">
               <input type="text" name="b_047b21035b177f7c889057eeb_9d120654f2" tabindex="-1" value="">
             </div>
-            <div id="mce-responses" class="clear foot">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
+            <div id="mce-responses" class="clear foot" role="status" aria-live="polite">
+              <div class="response" id="mce-error-response" hidden></div>
+              <div class="response" id="mce-success-response" hidden></div>
             </div>
             <div class="optionalParent">
               <div class="clear foot">
@@ -171,7 +172,7 @@
 
     <div class="ml-divider"></div>
 
-    <p style="font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.2em;color:var(--text-muted);text-transform:uppercase;margin-bottom:1rem">Follow Winslow</p>
+    <p class="ml-follow-label">Follow Winslow</p>
     <div class="ml-social">
       <a href="https://www.facebook.com/WinslowEaglestribute" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
       <a href="https://www.instagram.com/winsloweaglestribute/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
@@ -180,7 +181,7 @@
 
     <p class="ml-fine">
       By subscribing you agree to receive emails from Winslow &ndash; An Evening of the Eagles.<br>
-      We respect your privacy. <a href="https://mailchimp.com/legal/terms" target="_blank" rel="noopener">Unsubscribe anytime.</a>
+      We respect your privacy. Unsubscribe anytime.
     </p>
   </div>
 </section>
@@ -193,7 +194,7 @@
         <a href="https://www.facebook.com/WinslowEaglestribute" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
         <a href="https://www.instagram.com/winsloweaglestribute/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://www.facebook.com/FansofWinslow" target="_blank" rel="noopener" aria-label="Fans of Winslow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></a>
-        <a href="/cdn-cgi/l/email-protection#197b76767270777e596e70776a75766e7c787e757c6a6d6b707b6c6d7c377a7674" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        <a href="mailto:booking@winsloweaglestribute.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
       </div>
     </div>
     <nav class="footer-nav" aria-label="Footer navigation">
@@ -202,11 +203,11 @@
     </nav>
     <div class="footer-contact">
       <p>Reuben Entertainment LLC.<br>PO Box 7275<br>Colonia, NJ 07067</p>
-      <p style="margin-top:.8rem"><a href="/cdn-cgi/l/email-protection#02606d6d696b6c6542756b6c716e6d756763656e677176706b607776672c616d6f"><span class="__cf_email__" data-cfemail="264449494d4f484166514f48554a49514347414a435552544f445352430845494b">[email&#160;protected]</span></a></p>
+      <p class="footer-email"><a href="mailto:booking@winsloweaglestribute.com">booking@winsloweaglestribute.com</a></p>
     </div>
   </div>
   <div class="footer-mailing">
-    <a href="/mailinglist/" class="footer-mailing-link">Join the Mailing List</a>
+    <a href="mailinglist.html" class="footer-mailing-link">Join the Mailing List</a>
   </div>
   <div class="footer-bottom">
     <span>&copy; 2026 WinslowEaglesTribute.com &nbsp;&middot;&nbsp; An Evening of the Eagles</span>
@@ -214,4 +215,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/shows.js"></script><script s
+<script src="js/shows.js"></script><script src="jsmain/main.js"></script>
+<script src="js/mailinglist.js"></script>
+</body>
+</html>
