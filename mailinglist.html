@@ -89,6 +89,16 @@
   .ml-fine{font-size:.8rem;color:var(--text-muted);margin-top:1.5rem;line-height:1.6}
   .ml-fine a{color:var(--gold-dim);transition:color .2s}
   .ml-fine a:hover{color:var(--gold-light)}
+  .ml-required-note{font-size:.8rem;color:var(--text-muted);margin:-.8rem 0 1.4rem}
+  .asterisk{color:var(--gold)}
+  #mc_embed_signup .mc-field-group.ml-check{display:flex!important;align-items:flex-start;gap:.75rem;margin:1.6rem 0!important}
+  #mc_embed_signup .mc-field-group.ml-check input{width:20px;height:20px;margin:.1rem 0 0;flex-shrink:0;accent-color:var(--gold);cursor:pointer}
+  #mc_embed_signup .mc-field-group.ml-check label{display:inline!important;margin:0!important;font-family:'Raleway',sans-serif!important;font-size:1rem!important;letter-spacing:0!important;text-transform:none!important;color:var(--text)!important;cursor:pointer}
+  .ml-captcha-row{display:flex;align-items:center;gap:1rem;margin-bottom:.75rem}
+  #ml-captcha-canvas{border:1px solid rgba(201,168,76,.3);background:rgba(255,255,255,.04);width:180px;height:56px}
+  .ml-captcha-refresh{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;background:none;border:1px solid rgba(201,168,76,.3);color:var(--gold-dim);padding:.6rem .9rem;cursor:pointer;transition:border-color .2s,color .2s}
+  .ml-captcha-refresh:hover{border-color:var(--gold);color:var(--gold-light)}
+  #ml-CAPTCHA{text-transform:uppercase;letter-spacing:.3em}
   @media(max-width:768px){.ml-hero{height:260px;padding-bottom:2rem}.ml-hero-content h1{font-size:2rem}.ml-section{padding:3rem 1.2rem}}
 </style>
 </head>
@@ -125,13 +135,13 @@
     </div>
     <p class="ml-intro">
       Be the first to know about <strong>new tour dates</strong>, ticket presales, and exclusive updates from
-      Winslow — An Evening of the Eagles. We don't spam. Just the good stuff.
+      Winslow, An Evening of the Eagles. We don't spam. Just the good stuff.
     </p>
 
     <!-- Mailchimp Embed Form -->
     <div id="mc_embed_shell">
       <div id="mc_embed_signup">
-        <form action="https://winsloweaglestribute.us14.list-manage.com/subscribe/post?u=047b21035b177f7c889057eeb&amp;id=9d120654f2&amp;f_id=0028fae0f0"
+        <form action="https://winsloweaglestribute.us14.list-manage.com/subscribe/post?u=047b21035b177f7c889057eeb&amp;id=9d120654f2&amp;f_id=004d43e5f0"
               method="post"
               id="mc-embedded-subscribe-form"
               name="mc-embedded-subscribe-form"
@@ -139,17 +149,36 @@
               novalidate>
           <div id="mc_embed_signup_scroll">
             <h2>Subscribe for Updates</h2>
+            <p class="ml-required-note"><span class="asterisk">*</span> All fields are required</p>
             <div class="mc-field-group">
               <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="your@email.com">
+              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required autocomplete="email" placeholder="your@email.com">
+            </div>
+            <!-- No name attribute: checked on the page, never sent to Mailchimp -->
+            <div class="mc-field-group">
+              <label for="ml-EMAIL2">Confirm Email Address <span class="asterisk">*</span></label>
+              <input type="email" id="ml-EMAIL2" required autocomplete="off" placeholder="Type it again">
             </div>
             <div class="mc-field-group">
-              <label for="mce-FNAME">First Name</label>
-              <input type="text" name="FNAME" id="mce-FNAME" placeholder="First name">
+              <label for="mce-FNAME">First Name <span class="asterisk">*</span></label>
+              <input type="text" name="FNAME" class="required" id="mce-FNAME" required autocomplete="given-name" placeholder="First name">
             </div>
             <div class="mc-field-group">
-              <label for="mce-LNAME">Last Name</label>
-              <input type="text" name="LNAME" id="mce-LNAME" placeholder="Last name">
+              <label for="mce-LNAME">Last Name <span class="asterisk">*</span></label>
+              <input type="text" name="LNAME" class="required" id="mce-LNAME" required autocomplete="family-name" placeholder="Last name">
+            </div>
+            <!-- MMERGE6 = "Permission to Join" audience field. Value must stay "Yes?" to match Mailchimp's choice. -->
+            <div class="mc-field-group ml-check">
+              <input type="checkbox" name="MMERGE6" id="mce-MMERGE6" value="Yes?" required>
+              <label for="mce-MMERGE6">Yes, add me to the Winslow email list <span class="asterisk">*</span></label>
+            </div>
+            <div class="mc-field-group ml-captcha">
+              <label for="ml-CAPTCHA">Type the Code Below <span class="asterisk">*</span></label>
+              <div class="ml-captcha-row">
+                <canvas id="ml-captcha-canvas" width="180" height="56" role="img" aria-label="Security code image"></canvas>
+                <button type="button" id="ml-captcha-refresh" class="ml-captcha-refresh">New Code</button>
+              </div>
+              <input type="text" id="ml-CAPTCHA" required autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="5" placeholder="5 characters">
             </div>
             <!-- Bot protection - do not remove -->
             <div class="mc-honeypot" aria-hidden="true">
@@ -161,7 +190,7 @@
             </div>
             <div class="optionalParent">
               <div class="clear foot">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe — It's Free">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe. It's Free.">
               </div>
             </div>
           </div>
